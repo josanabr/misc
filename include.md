@@ -2,11 +2,11 @@
 
 A continuación se muestran los archivos de cabecera más comunmente usados en los programas en C que se usan en mis cursos de Sistemas Operativos y Sistemas Distribuidos.
 
-| Archivo de cabecera | Funciones definidas |
-|:-:|---|
-| `stdlib.h` | `srand()` `rand()` |
-| `pthread.h` | `pthread_create()` `pthread_join()` `pthread_*` |
-| `mpi.h` | `MPI_Init()`, `MPI_Finalize()`, `MPI_*` |
+| Archivo de cabecera | Funciones definidas | Ejemplos |
+|:-:|---|---|
+| `stdlib.h` | `srand()` `rand()` | [rand](rand) |
+| `pthread.h` | `pthread_create()` `pthread_join()` `pthread_*` ||
+| `mpi.h` | `MPI_Init()`, `MPI_Finalize()`, `MPI_*` ||
 
 
 Ejemplos de programas en C para:
