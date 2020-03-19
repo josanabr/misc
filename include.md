@@ -6,7 +6,7 @@ A continuación se muestran los archivos de cabecera más comunmente usados en l
 |:-:|---|
 | `stdlib.h` | `srand()` `rand()` |
 | `pthread.h` | `pthread_create()` `pthread_join()` `pthread_*` |
-| `mpi.h` | `
+| `mpi.h` | `MPI_Init()`, `MPI_Finalize()`, `MPI_*` |
 
 
 Ejemplos de programas en C para:
