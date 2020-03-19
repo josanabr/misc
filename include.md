@@ -6,19 +6,21 @@ A continuación se muestran los archivos de cabecera más comunmente usados en l
 |:-:|---|
 | `stdlib.h` | `srand()` `rand()` |
 | `pthread.h` | `pthread_create()` `pthread_join()` `pthread_*` |
+| `mpi.h` | `
 
 
 Ejemplos de programas en C para:
 
-* [Archivo con hilos de ejecución](#archivo-con-hilos-de-ejecucion)
+* [pthread](#pthread)
+* [mpi](#mpi)
 
 
 
 ---
 
-## Archivo con hilos de ejecucion
+## pthread
 
-Asuma que el código abajo es almacenado en un archivo llamado `demo.c`.
+Asuma que el código abajo es almacenado en un archivo llamado `thread.c`.
 
 ```
 #include <pthread.h>
@@ -42,5 +44,36 @@ int main(int argc, char** argv) {
 Para compilar el programa anterior:
 
 ```
-gcc -pthread demo.c -o demo
+gcc -pthread thread.c -o thread
+```
+
+---
+
+## mpi
+
+Asuma que el código abajo es almacenado en un archivo llamado `mpi.c`.
+
+```
+#include <stdio.h>
+#include "mpi.h"
+
+int main(){ 
+  MPI_Init(NULL, NULL);  
+  printf("Wonderful Class!\n");
+  MPI_Finalize(); 
+
+  return(0);
+}
+```
+
+Compilar,
+
+```
+mpicc mpi.c -o mpi
+```
+
+Ejecutar
+
+```
+mpirun -n 8 ./mpi
 ```
