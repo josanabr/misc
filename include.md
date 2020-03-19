@@ -66,14 +66,20 @@ int main(){
 }
 ```
 
+Archivo con los nodos a usar en la ejecución. Asuma que este archivo se llama `hosts`.
+
+```
+localhost
+```
+
 Compilar,
 
 ```
 mpicc mpi.c -o mpi
 ```
 
-Ejecutar
+Ejecutar:
 
 ```
-mpirun -n 8 ./mpi
+mpirun -n 8 -f hosts ./mpi
 ```
