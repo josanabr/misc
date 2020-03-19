@@ -16,7 +16,7 @@ Ejemplos de programas en C para:
 
 ---
 
-## Archivo con hilos de ejecución
+## Archivo con hilos de ejecucion
 
 Asuma que el código abajo es almacenado en un archivo llamado `demo.c`.
 
