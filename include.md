@@ -55,15 +55,22 @@ Asuma que el código abajo es almacenado en un archivo llamado `mpi.c`.
 
 ```
 #include <stdio.h>
-#include "mpi.h"
-
-int main(){ 
-  MPI_Init(NULL, NULL);  
-  printf("Wonderful Class!\n");
-  MPI_Finalize(); 
+#include <mpi.h>
+#include <limits.h>
+#include <unistd.h>
+    
+int main(){
+  int myrank, worldsize;
+  char hostname[HOST_NAME_MAX + 1];
+  gethostname(hostname, HOST_NAME_MAX + 1);
+  MPI_Init(NULL, NULL);
+  MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+  MPI_Comm_size(MPI_COMM_WORLD, &worldsize);
+  printf("Process %d says Wonderful Class from %s!\n",myrank,hostname);
+  MPI_Finalize();
 
   return(0);
-}
+} 
 ```
 
 Archivo con los nodos a usar en la ejecución. Asuma que este archivo se llama `hosts`.
